@@ -1,0 +1,14 @@
+node_modules/
+.cdk.staging
+cdk.out
+dist/
+.DS_Store
+.env
+.env.*.local
+target/
+coverage/
+*.iml
+*.ipr
+.idea
+.junie
+cdk.context.json

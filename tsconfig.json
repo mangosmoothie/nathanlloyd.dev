@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "types": ["node"],
+        "alwaysStrict": true,
+        "declaration": false,
+        "declarationMap": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "isolatedModules": true,
+        "lib": ["es2021", "dom"],
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "newLine": "lf",
+        "noEmit": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false,
+        "target": "es2021",
+        "useDefineForClassFields": true
+    },
+    "exclude": ["**/node_modules/", "cdk.out"]
+}
