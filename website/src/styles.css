@@ -13,6 +13,17 @@
 
 .logo-bcbs { filter: brightness(0); }
 
+#contact-form:not([hidden]),
+.contact-result:not([hidden]) {
+  animation: contact-swap 300ms ease both;
+}
+.contact-result[data-state="success"] .contact-result-icon::before { content: "\f058"; color: #22c55e; }
+.contact-result[data-state="error"] .contact-result-icon::before { content: "\f06a"; color: #ef4444; }
+@keyframes contact-swap {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero-mountains {
   background-size: cover;
   background-position: 50% 42%;

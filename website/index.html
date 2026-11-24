@@ -19,7 +19,7 @@
             <a href="#results" class="hover:text-primary transition-colors">Results</a>
             <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
         </div>
-        <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+        <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
             <i class="fas fa-moon dark:hidden"></i>
             <i class="fas fa-sun hidden dark:block"></i>
         </button>
@@ -275,8 +275,14 @@
             </button>
         </form>
 
-        <div id="contact-result"
-             class="hidden opacity-0 transition-all duration-300 py-8 text-center min-h-[210px]"></div>
+        <div id="contact-result" hidden class="contact-result py-8 text-center min-h-[210px]">
+            <i class="contact-result-icon fas text-5xl mb-4" aria-hidden="true"></i>
+            <p data-contact-message role="status" class="text-lg text-slate-700 dark:text-slate-300 mb-4"></p>
+            <button type="button" data-contact-retry
+                    class="px-6 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition">
+                Try again?
+            </button>
+        </div>
 
         <div class="text-center mt-12">
             <p class="text-sm text-slate-500">Or email me directly at
@@ -307,117 +313,6 @@
     </div>
 </footer>
 
-<script>
-    function toggleDarkMode() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-
-    (function () {
-        const t = localStorage.getItem('theme');
-        if (t === 'dark') document.documentElement.classList.add('dark');
-    })();
-
-    const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((email || '').trim());
-    const isHoneypotFilled = (data) => !!(data.company && String(data.company).trim());
-
-    function showContactResult(success, msg, retryData) {
-        const formEl = document.getElementById('contact-form');
-        const resultEl = document.getElementById('contact-result');
-        formEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-        formEl.style.opacity = '0';
-        formEl.style.transform = 'translateY(-4px)';
-        setTimeout(() => {
-            formEl.classList.add('hidden');
-            formEl.style.opacity = '';
-            formEl.style.transform = '';
-            let html = '';
-            if (success) {
-                html = '<div class="flex flex-col items-center"><i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i><p class="text-lg text-slate-700 dark:text-slate-300">' + msg + '</p></div>';
-            } else {
-                html = '<div class="flex flex-col items-center"><i class="fas fa-exclamation-circle text-4xl text-red-500 mb-3"></i><p class="text-red-600 dark:text-red-400 mb-4">' + msg + '</p><button type="button" onclick="retryContactForm()" class="px-6 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition">Try again?</button></div>';
-            }
-            resultEl.innerHTML = html;
-            resultEl.classList.remove('hidden');
-            resultEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-            resultEl.style.opacity = '0';
-            resultEl.style.transform = 'translateY(4px)';
-            void resultEl.offsetWidth;
-            resultEl.style.opacity = '1';
-            resultEl.style.transform = 'translateY(0)';
-            if (retryData) resultEl.dataset.retryData = JSON.stringify(retryData);
-        }, 300);
-    }
-
-    function retryContactForm() {
-        const formEl = document.getElementById('contact-form');
-        const resultEl = document.getElementById('contact-result');
-        const data = resultEl.dataset.retryData ? JSON.parse(resultEl.dataset.retryData) : {};
-        resultEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-        resultEl.style.opacity = '0';
-        resultEl.style.transform = 'translateY(-4px)';
-        setTimeout(() => {
-            resultEl.classList.add('hidden');
-            resultEl.style.opacity = '';
-            resultEl.style.transform = '';
-            resultEl.innerHTML = '';
-            delete resultEl.dataset.retryData;
-            formEl.classList.remove('hidden');
-            formEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-            formEl.style.opacity = '0';
-            formEl.style.transform = 'translateY(4px)';
-            if (data.name) formEl.querySelector('input[name="name"]').value = data.name;
-            if (data.email) formEl.querySelector('input[name="email"]').value = data.email;
-            if (data.message) formEl.querySelector('textarea[name="message"]').value = data.message;
-            void formEl.offsetWidth;
-            formEl.style.opacity = '1';
-            formEl.style.transform = 'translateY(0)';
-            setTimeout(() => {
-                formEl.style.transition = '';
-                formEl.style.opacity = '';
-                formEl.style.transform = '';
-            }, 300);
-        }, 300);
-    }
-
-    document.getElementById('contact-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const form = e.currentTarget;
-        const data = Object.fromEntries(new FormData(form).entries());
-        if (isHoneypotFilled(data)) {
-            showContactResult(true, 'Thank you, I will get back to you shortly.');
-            return;
-        }
-        if (!isValidEmail(data.email)) {
-            showContactResult(false, 'Please provide a valid email address.', data);
-            return;
-        }
-        const last = parseInt(localStorage.getItem('lastContact') || '0', 10);
-        if (Date.now() - last < 60000) {
-            showContactResult(false, 'Please wait a minute before sending another message.', data);
-            return;
-        }
-        const btn = form.querySelector('button[type="submit"]');
-        if (btn) btn.disabled = true;
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(data)
-            });
-            if (res.ok) {
-                localStorage.setItem('lastContact', Date.now().toString());
-                showContactResult(true, 'Thank you, I will get back to you shortly.');
-            } else {
-                const err = await res.json().catch(() => ({}));
-                showContactResult(false, 'Error: ' + (err.error || 'Failed to send'), data);
-            }
-        } catch {
-            showContactResult(false, 'Network error, please try again or email me.', data);
-        } finally {
-            if (btn) btn.disabled = false;
-        }
-    });
-</script>
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

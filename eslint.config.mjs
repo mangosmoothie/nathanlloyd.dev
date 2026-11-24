@@ -73,6 +73,14 @@ export default [
         },
     },
     {
+        files: ['website/src/**/*.ts'],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+            },
+        },
+    },
+    {
         ignores: [
             '**/dist/',
             '**/node_modules/**',
