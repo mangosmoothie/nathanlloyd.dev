@@ -4,420 +4,655 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Lloyd | Full Stack Cloud & AI Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description"
+          content="Nathan Lloyd builds AI products and the AWS cloud they run on. 20+ years of enterprise engineering at AMD, the IRS, General Motors and Blue Cross NC.">
+    <meta name="theme-color" content="#08090C">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nathanlloyd.dev/">
+    <meta property="og:title" content="Nathan Lloyd | Full Stack Cloud & AI Developer">
+    <meta property="og:description" content="I build AI products and the AWS cloud they run on.">
+    <meta property="og:image" content="https://nathanlloyd.dev/profile-pic-light.jpg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/src/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Nathan Lloyd",
+            "jobTitle": "Full Stack Cloud & AI Developer",
+            "url": "https://nathanlloyd.dev",
+            "email": "mailto:contact@nathanlloyd.dev",
+            "image": "https://nathanlloyd.dev/profile-pic-light.jpg",
+            "address": {"@type": "PostalAddress", "addressLocality": "Windsor", "addressRegion": "CO"},
+            "sameAs": [
+                "https://www.linkedin.com/in/nathan-lloyd-45590b2b",
+                "https://github.com/mangosmoothie",
+                "https://twitter.com/adventuresoluti"
+            ]
+        }
+    </script>
 </head>
-<body class="bg-brand-bg-light text-brand-text-primary dark:bg-brand-bg-dark dark:text-white">
+<body class="bg-ink font-sans text-zinc-100 antialiased">
 
-<!-- Navigation -->
-<nav class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <a href="#" class="text-2xl font-semibold text-primary dark:text-primary">Nathan Lloyd</a>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="#about" class="hover:text-primary transition-colors">About</a>
-            <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
-            <a href="#results" class="hover:text-primary transition-colors">Results</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+<a href="#main"
+   class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-black">
+    Skip to content
+</a>
+
+<header class="fixed inset-x-0 top-4 z-50 px-4">
+    <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-full border border-white/10 bg-ink/70 py-2 pl-5 pr-2 backdrop-blur-xl">
+        <a href="#" class="flex items-center gap-2.5 text-sm font-semibold tracking-tight">
+            <span class="logo-mark" aria-hidden="true"></span>
+            Nathan Lloyd
+        </a>
+        <nav class="hidden items-center gap-7 text-sm text-zinc-400 md:flex" aria-label="Primary">
+            <a href="#work" class="transition hover:text-white">Work</a>
+            <a href="#capabilities" class="transition hover:text-white">Capabilities</a>
+            <a href="#experience" class="transition hover:text-white">Experience</a>
+            <a href="#about" class="transition hover:text-white">About</a>
+        </nav>
+        <div class="flex items-center gap-1">
+            <a href="#contact" class="btn btn-light px-4 py-2 text-sm">Book a call</a>
+            <details data-nav-menu class="relative md:hidden">
+                <summary aria-label="Menu"
+                         class="grid h-9 w-9 cursor-pointer list-none place-items-center rounded-full text-zinc-300 hover:bg-white/10 [&::-webkit-details-marker]:hidden">
+                    <svg class="icon h-5 w-5" aria-hidden="true">
+                        <use href="/icons.svg#menu"/>
+                    </svg>
+                </summary>
+                <nav class="absolute right-0 top-full mt-4 grid w-52 gap-1 rounded-2xl border border-white/10 bg-panel p-2 text-sm shadow-2xl"
+                     aria-label="Mobile">
+                    <a href="#work" class="rounded-xl px-4 py-3 hover:bg-white/5">Work</a>
+                    <a href="#capabilities" class="rounded-xl px-4 py-3 hover:bg-white/5">Capabilities</a>
+                    <a href="#experience" class="rounded-xl px-4 py-3 hover:bg-white/5">Experience</a>
+                    <a href="#about" class="rounded-xl px-4 py-3 hover:bg-white/5">About</a>
+                </nav>
+            </details>
         </div>
-        <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:block"></i>
-        </button>
     </div>
-</nav>
+</header>
 
-<!-- Hero -->
-<section class="min-h-screen flex items-center py-16 md:py-20 relative overflow-hidden">
-    <!-- Base mountain background -->
-    <div class="hero-mountains absolute inset-0"
-         style="background-image: url('/images/rocky-mountains-dawn.jpg');"></div>
+<main id="main">
 
-    <!-- Subtle contrast scrim for text readability -->
-    <div class="hero-scrim absolute inset-0" aria-hidden="true"></div>
+    <section class="hero relative isolate overflow-hidden px-6 pb-24 pt-40 sm:pt-48">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
 
-    <!-- Gentle drifting mist layers -->
-    <div class="fog-layer fog-1 absolute inset-x-0" aria-hidden="true"></div>
-    <div class="fog-layer fog-2 absolute inset-x-0" aria-hidden="true"></div>
-    <div class="fog-layer fog-3 absolute inset-x-0" aria-hidden="true"></div>
-
-    <!-- Faint drifting light rays (painted above mist for sky effect) -->
-    <div class="light-rays absolute inset-0" aria-hidden="true"></div>
-
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <!-- Left: Text -->
-        <div class="text-white">
-            <p class="text-sm tracking-widest mb-4">WINDSOR, COLORADO</p>
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Nathan Lloyd</h1>
-
-            <p class="text-3xl md:text-4xl font-light leading-tight mb-8">
-                Empowering your business with intelligent AI and cloud solutions.
+        <div class="relative mx-auto max-w-4xl text-center">
+            <p class="pill mx-auto">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                Booking new AI and cloud projects
             </p>
-
-            <p class="text-xl max-w-xl leading-relaxed mb-10">
-                Delivering secure, private AI and cloud solutions with 20+ years of proven enterprise results.
+            <h1 class="mt-8 text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+                I build AI products and the <span class="gradient-text">cloud they run on.</span>
+            </h1>
+            <p class="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-relaxed text-zinc-400 sm:text-xl">
+                Nathan Lloyd. Principal developer with 20+ years shipping secure, serverless systems at AMD, the IRS,
+                General Motors and Blue Cross NC. Now designing, building and operating products of my own.
             </p>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contact"
-                   class="bg-white text-primary px-8 py-4 rounded-2xl font-semibold hover:bg-primary/10 transition-all text-lg text-center">
-                    Book a Discovery Call
+            <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a href="#contact" class="btn btn-light w-full px-6 py-3.5 sm:w-auto">
+                    Book a discovery call
+                    <svg class="icon h-4 w-4" aria-hidden="true">
+                        <use href="/icons.svg#arrow-right"/>
+                    </svg>
                 </a>
-                <a href="Nathan-Lloyd-Resume-2026.pdf" target="_blank"
-                   class="border border-accent hover:border-accent px-8 py-4 rounded-2xl font-semibold transition-all text-lg flex items-center justify-center gap-2 text-accent">
-                    <i class="fas fa-download"></i> Download Resume
+                <a href="/Nathan-Lloyd-Resume-2026.pdf" target="_blank" rel="noopener"
+                   class="btn btn-ghost w-full px-6 py-3.5 sm:w-auto">
+                    <svg class="icon h-4 w-4" aria-hidden="true">
+                        <use href="/icons.svg#download"/>
+                    </svg>
+                    Resume
                 </a>
             </div>
         </div>
 
-        <!-- Right: Profile Picture -->
-        <div class="flex justify-center md:justify-end">
-            <div class="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white/30 shadow-2xl">
-                <img src="/profile-pic-light.jpg"
-                     alt="Nathan Lloyd - Headshot"
-                     class="w-full h-full object-cover">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About -->
-<section id="about" class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-12">About Me</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-lg leading-relaxed mb-6">
-                    AI & Cloud Engineer with 20+ years building high-impact enterprise systems. At Blue Cross Blue
-                    Shield NC, I integrate AI, architect serverless AWS solutions, and lead digital transformation.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Transitioning to freelance to deliver the same enterprise quality and secure, intelligent AI and
-                    cloud solutions directly to businesses.
-                </p>
-            </div>
-            <div class="text-lg leading-relaxed">
-                <p class="mb-6">
-                    Husband and father of three in Windsor, Colorado.
-                    Cub Scout Den Leader, youth sports coach, and learning piano with my oldest son.
-                    I bring the same practical leadership, patience, and focus on real results to every client project.
-                </p>
-                <p>
-                    <span class="text-accent font-semibold">
-                        Professional. Approachable. Results-driven.
-                    </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Expertise -->
-<section id="expertise" class="py-24 bg-slate-100 dark:bg-slate-800">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-16">Expertise</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Enterprise Grade Security</h3>
-                <p>Hardened enterprise solutions with IAM, encryption, and multi-layered protections against modern
-                    threats.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Data Privacy</h3>
-                <p>Privacy-first design — your data remains private and fully under your control.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">AI & Autonomous Agents</h3>
-                <p>Custom AI agents, GenAI applications, chatbots, and transparent automation for content and
-                    processes.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">AWS Cloud Architecture</h3>
-                <p>AWS Serverless, Bedrock, and scalable compute delivering resilient, cost-efficient
-                    infrastructure.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Data Engineering & ML</h3>
-                <p>Large-scale pipelines, vector databases, natural language processing, and predictive analytics.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Cost Optimized Solutions</h3>
-                <p>Cost-optimized solutions through rapid development and efficient pay-as-you-grow resource
-                    management.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Results -->
-<section id="results" class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-8">Proven Results</h2>
-        <div class="mb-6">
-            <p class="text-center text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 mb-4">IMPACT AT
-                A GLANCE</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">20+</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Years</div>
+        <div class="relative mx-auto mt-20 max-w-4xl" data-reveal>
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="font-mono text-xs text-zinc-500">nathan@windsor-co: ~/projects</span>
+                    <span class="w-12"></span>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">144M+</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Citizens
-                        Served
+                <div class="overflow-x-auto p-5 font-mono text-[13px] leading-7 sm:p-7">
+                    <p class="whitespace-nowrap text-zinc-300">
+                        <span class="text-emerald-400">&#10140;</span>
+                        <span class="text-cyan-300">~/projects</span>
+                        <span class="typed">deployments ls</span>
+                    </p>
+                    <table class="term-table mt-3 w-full min-w-[420px] text-left sm:min-w-[640px]">
+                        <thead>
+                        <tr class="text-zinc-600">
+                            <th class="font-normal">NAME</th>
+                            <th class="font-normal">STATUS</th>
+                            <th class="hidden font-normal sm:table-cell">STACK</th>
+                            <th class="font-normal">URL</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-zinc-300">
+                        <tr>
+                            <td class="text-white">adventure-guide</td>
+                            <td><span class="text-emerald-400">&#9679; live</span></td>
+                            <td class="hidden text-zinc-500 sm:table-cell">next.js &middot; aws &middot; genai</td>
+                            <td><a href="https://scoutsadventureguide.com" target="_blank" rel="noopener"
+                                   class="text-cyan-300 underline-offset-4 hover:underline">scoutsadventureguide.com</a></td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">social-media-manager</td>
+                            <td><span class="text-emerald-400">&#9679; live</span></td>
+                            <td class="hidden text-zinc-500 sm:table-cell">next.js &middot; aws &middot; genai</td>
+                            <td class="text-zinc-600">private</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">bmail</td>
+                            <td><span class="text-amber-300">&#9675; shipping soon</span></td>
+                            <td class="hidden text-zinc-500 sm:table-cell">aws &middot; email &middot; agents</td>
+                            <td class="text-zinc-600">pending</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">bizops</td>
+                            <td><span class="text-amber-300">&#9675; shipping soon</span></td>
+                            <td class="hidden text-zinc-500 sm:table-cell">collaborative web app</td>
+                            <td class="text-zinc-600">pending</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">nathanlloyd.dev</td>
+                            <td><span class="text-emerald-400">&#9679; live</span></td>
+                            <td class="hidden text-zinc-500 sm:table-cell">cdk &middot; cloudfront &middot; lambda &middot; ses</td>
+                            <td><a href="https://github.com/mangosmoothie/nathanlloyd.dev" target="_blank"
+                                   rel="noopener" class="text-cyan-300 underline-offset-4 hover:underline">source on github</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 whitespace-nowrap text-zinc-300">
+                        <span class="text-emerald-400">&#10140;</span>
+                        <span class="text-cyan-300">~/projects</span>
+                        <span class="caret" aria-hidden="true"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative mx-auto mt-20 max-w-5xl" data-reveal>
+            <p class="text-center font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">
+                20+ years of engineering at
+            </p>
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-8 opacity-60 sm:gap-x-14">
+                <img src="/images/logos/bcbsnc.svg" alt="Blue Cross NC" class="logo h-6 w-auto sm:h-8">
+                <img src="/images/logos/gm.svg" alt="General Motors" class="logo h-7 w-7 sm:h-9 sm:w-9">
+                <img src="/images/logos/irs.svg" alt="IRS" class="logo h-7 w-auto sm:h-9">
+                <img src="/images/logos/amd.svg" alt="AMD" class="logo h-6 w-auto sm:h-8">
+            </div>
+        </div>
+    </section>
+
+    <section class="border-y border-white/10" aria-label="Impact at a glance">
+        <dl class="mx-auto grid max-w-6xl grid-cols-2 divide-white/10 lg:grid-cols-4 lg:divide-x">
+            <div class="stat">
+                <dd class="stat-value">20+</dd>
+                <dt class="stat-label">years shipping production systems</dt>
+            </div>
+            <div class="stat">
+                <dd class="stat-value">144M+</dd>
+                <dt class="stat-label">citizens served by IRS systems I supported</dt>
+            </div>
+            <div class="stat">
+                <dd class="stat-value">10 TB</dd>
+                <dt class="stat-label">processed daily by AI pipelines I built at GM</dt>
+            </div>
+            <div class="stat">
+                <dd class="stat-value">3&times;</dd>
+                <dt class="stat-label">General Motors Annual Top Coder</dt>
+            </div>
+        </dl>
+    </section>
+
+    <section id="work" class="section">
+        <div class="mx-auto max-w-6xl px-6">
+            <div class="max-w-2xl" data-reveal>
+                <p class="kicker">Work</p>
+                <h2 class="section-title">Shipped, and shipping.</h2>
+                <p class="section-lead">
+                    Products I own end to end: the idea, the architecture, the AI, the interface and the
+                    operations. All serverless on AWS.
+                </p>
+            </div>
+
+            <div class="mt-14 grid gap-5 lg:grid-cols-2">
+                <article class="project lg:col-span-2 lg:grid lg:grid-cols-2" data-reveal>
+                    <div class="flex flex-col p-8 sm:p-10">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="status status-live">Live</span>
+                            <a href="https://scoutsadventureguide.com" target="_blank" rel="noopener"
+                               class="link font-mono text-xs">scoutsadventureguide.com
+                                <svg class="icon h-3 w-3" aria-hidden="true">
+                                    <use href="/icons.svg#arrow-up-right"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="mt-5 text-3xl font-semibold tracking-tight">Adventure Guide</h3>
+                        <p class="mt-4 leading-relaxed text-zinc-400">
+                            An invite-only meeting planner for Cub Scout packs. A leader picks an Adventure and a
+                            time limit; AI drafts activities and a prep list that fit; the published agenda lands
+                            on the pack calendar for everyone to follow.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li class="tick">Structured generation with content guardrails, section locks and
+                                per-leader quotas</li>
+                            <li class="tick">Invite-only accounts with Leader and Member roles</li>
+                            <li class="tick">Next.js on serverless AWS, invitations through Amazon SES</li>
+                        </ul>
+                        <div class="mt-auto flex flex-wrap gap-2 pt-8">
+                            <span class="chip">Next.js</span><span class="chip">TypeScript</span>
+                            <span class="chip">AWS serverless</span><span class="chip">Generative AI</span>
+                        </div>
+                    </div>
+                    <div class="mock-stage mock-stage-teal" aria-hidden="true">
+                        <div class="mock">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                <div>
+                                    <p class="text-sm font-medium text-white">Wolf Den meeting</p>
+                                    <p class="mt-0.5 font-mono text-[11px] text-zinc-500">Tue 6:30 PM &middot; 60 min</p>
+                                </div>
+                                <span class="status status-live">Published</span>
+                            </div>
+                            <ul class="mt-4 space-y-2 text-[13px] text-zinc-400">
+                                <li class="mock-row"><span>Gathering</span><span class="mock-bar w-16"></span></li>
+                                <li class="mock-row"><span>Opening</span><span class="mock-bar w-24"></span></li>
+                                <li class="mock-row mock-row-active">
+                                    <span class="flex items-center gap-2 text-white">Activities
+                                        <span class="rounded bg-emerald-400 px-1.5 text-[9px] font-bold text-black">AI</span>
+                                    </span>
+                                    <span class="mock-bar w-28 bg-emerald-400/60"></span>
+                                </li>
+                                <li class="mock-row"><span>Announcements</span><span class="mock-bar w-14"></span></li>
+                                <li class="mock-row"><span>Closing</span><span class="mock-bar w-20"></span></li>
+                                <li class="mock-row mock-row-active">
+                                    <span class="flex items-center gap-2 text-white">Prep and materials
+                                        <span class="rounded bg-emerald-400 px-1.5 text-[9px] font-bold text-black">AI</span>
+                                    </span>
+                                    <span class="mock-bar w-20 bg-emerald-400/60"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project lg:col-span-2 lg:grid lg:grid-cols-2" data-reveal>
+                    <div class="mock-stage mock-stage-violet lg:order-first" aria-hidden="true">
+                        <div class="mock">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                <p class="text-sm font-medium text-white">Scheduled posts</p>
+                                <span class="font-mono text-[11px] text-zinc-500">calendar feed &middot; synced</span>
+                            </div>
+                            <ul class="mt-4 space-y-2 text-[13px]">
+                                <li class="mock-post">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-white">Pack meeting reminder</span>
+                                        <span class="status status-soon">Needs review</span>
+                                    </div>
+                                    <span class="mock-bar mt-3 block w-full"></span>
+                                    <span class="mock-bar mt-2 block w-3/4"></span>
+                                    <div class="mt-3 flex gap-1.5 font-mono text-[10px] text-zinc-400">
+                                        <span class="mock-tag">LinkedIn</span><span class="mock-tag">X</span><span
+                                            class="mock-tag">Facebook</span>
+                                    </div>
+                                </li>
+                                <li class="mock-post">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-white">Den hike this Saturday</span>
+                                        <span class="status status-info">Accepted</span>
+                                    </div>
+                                    <span class="mock-bar mt-3 block w-5/6"></span>
+                                </li>
+                                <li class="mock-post">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-white">Service project recap</span>
+                                        <span class="status status-live">Published</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col p-8 sm:p-10">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="status status-live">Live</span>
+                            <span class="font-mono text-xs text-zinc-500">private deployment</span>
+                        </div>
+                        <h3 class="mt-5 text-3xl font-semibold tracking-tight">Social Media Manager</h3>
+                        <p class="mt-4 leading-relaxed text-zinc-400">
+                            Turns a calendar into a publishing schedule. Every event becomes a post drafted in a
+                            reusable brand voice, waits in a review queue, then publishes to LinkedIn, X and
+                            Facebook on time.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+                            <li class="tick">Personalities: reusable voice and content strategy for every post</li>
+                            <li class="tick">Calendar sync that handles reschedules, edits and cancellations</li>
+                            <li class="tick">Token-authenticated queue so other automations can file posts</li>
+                            <li class="tick">Dry-run mode and an immutable audit trail of every publish attempt</li>
+                        </ul>
+                        <div class="mt-auto flex flex-wrap gap-2 pt-8">
+                            <span class="chip">Next.js</span><span class="chip">TypeScript</span>
+                            <span class="chip">AWS serverless</span><span class="chip">Generative AI</span>
+                            <span class="chip">CLI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project project-soon p-8 sm:p-10" data-reveal>
+                    <div class="flex items-center justify-between">
+                        <span class="project-icon"><svg class="icon h-6 w-6" aria-hidden="true"><use href="/icons.svg#mail"/></svg></span>
+                        <span class="status status-soon">Shipping soon</span>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-semibold tracking-tight">bmail</h3>
+                    <p class="mt-3 leading-relaxed text-zinc-400">
+                        Bot-friendly email that is easy to run in your own AWS account. Mailboxes that agents and
+                        automations can send from and read.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="chip">AWS</span><span class="chip">Email</span><span class="chip">AI agents</span>
+                    </div>
+                </article>
+
+                <article class="project project-soon p-8 sm:p-10" data-reveal>
+                    <div class="flex items-center justify-between">
+                        <span class="project-icon"><svg class="icon h-6 w-6" aria-hidden="true"><use href="/icons.svg#users"/></svg></span>
+                        <span class="status status-soon">Shipping soon</span>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-semibold tracking-tight">bizops</h3>
+                    <p class="mt-3 leading-relaxed text-zinc-400">
+                        A collaborative website for business operations: one shared place for a team to plan,
+                        track and run the work together.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="chip">Collaboration</span><span class="chip">Web app</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="section border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6">
+            <div class="max-w-2xl" data-reveal>
+                <p class="kicker">Capabilities</p>
+                <h2 class="section-title">Enterprise-grade engineering, without the enterprise overhead.</h2>
+                <p class="section-lead">
+                    Secure by default, private by design and priced by what you actually use.
+                </p>
+            </div>
+
+            <div class="cap-grid mt-14" data-reveal>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#bot"/></svg>
+                    <h3 class="cap-title">AI &amp; autonomous agents</h3>
+                    <p class="cap-text">Custom agents, GenAI applications, chatbots and transparent automation
+                        for content and business processes.</p>
+                </div>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#cloud"/></svg>
+                    <h3 class="cap-title">AWS cloud architecture</h3>
+                    <p class="cap-text">Serverless AWS and Bedrock platforms that stay resilient under load and
+                        cost-efficient at rest.</p>
+                </div>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#shield"/></svg>
+                    <h3 class="cap-title">Enterprise-grade security</h3>
+                    <p class="cap-text">Least-privilege IAM, encryption and layered protection against modern
+                        threats.</p>
+                </div>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#lock"/></svg>
+                    <h3 class="cap-title">Data privacy</h3>
+                    <p class="cap-text">Privacy-first design. Your data stays private and fully under your
+                        control.</p>
+                </div>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#database"/></svg>
+                    <h3 class="cap-title">Data engineering &amp; ML</h3>
+                    <p class="cap-text">Large-scale pipelines, search platforms, natural language processing and
+                        predictive analytics.</p>
+                </div>
+                <div class="cap">
+                    <svg class="icon h-6 w-6 text-cyan-300" aria-hidden="true"><use href="/icons.svg#gauge"/></svg>
+                    <h3 class="cap-title">Cost-optimized delivery</h3>
+                    <p class="cap-text">Rapid development and pay-as-you-grow infrastructure, so spend scales
+                        with use.</p>
+                </div>
+            </div>
+
+            <div class="mt-5 rounded-2xl border border-white/10 bg-panel p-6 font-mono text-[13px] leading-7 sm:p-8"
+                 data-reveal>
+                <p class="text-zinc-600"># stack.yml</p>
+                <dl class="stack">
+                    <dt>aws</dt>
+                    <dd>CDK, Lambda, API Gateway, DynamoDB, S3, Step Functions, ECS, EC2, IAM, VPC, RDS, Bedrock</dd>
+                    <dt>ai</dt>
+                    <dd>agents, generative AI, intelligent workflows, ML pipelines, search platforms</dd>
+                    <dt>fullstack</dt>
+                    <dd>TypeScript, React, Web Components, Tailwind CSS, Node.js, Python, Java</dd>
+                    <dt>platform</dt>
+                    <dd>Postgres, SQL, Elasticsearch, Docker, Linux, DevOps, infrastructure as code</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6">
+            <div class="flex flex-col justify-between gap-8 sm:flex-row sm:items-end" data-reveal>
+                <div class="max-w-2xl">
+                    <p class="kicker">Experience</p>
+                    <h2 class="section-title">Two decades at enterprise scale.</h2>
+                </div>
+                <a href="/Nathan-Lloyd-Resume-2026.pdf" target="_blank" rel="noopener"
+                   class="btn btn-ghost shrink-0 self-start px-5 py-3 text-sm sm:self-auto">
+                    <svg class="icon h-4 w-4" aria-hidden="true">
+                        <use href="/icons.svg#download"/>
+                    </svg>
+                    Download resume
+                </a>
+            </div>
+
+            <ol class="mt-14">
+                <li class="role" data-reveal>
+                    <p class="role-date">2021 &rarr; now</p>
+                    <div>
+                        <h3 class="role-title">Principal Developer</h3>
+                        <p class="role-org">Blue Cross Blue Shield NC</p>
+                    </div>
+                    <ul class="role-points">
+                        <li>Delivered production AI that orchestrates meetings, speeds prospect-to-customer sales
+                            conversion and runs asynchronous workflows.</li>
+                        <li>Architected serverless AWS platforms that cut cost, vulnerabilities and complexity.</li>
+                        <li>Embedded AI across developer workflows and the full SDLC.</li>
+                        <li>Lead developer on paperless and digital wallet transformation.</li>
+                    </ul>
+                </li>
+                <li class="role" data-reveal>
+                    <p class="role-date">2014 &rarr; 2021</p>
+                    <div>
+                        <h3 class="role-title">Senior Software Developer</h3>
+                        <p class="role-org">General Motors</p>
+                    </div>
+                    <ul class="role-points">
+                        <li>Built AI annotation pipelines processing about 10 TB of data daily for safety issue
+                            detection and rapid model training.</li>
+                        <li>Led the LiDAR-to-3D simulation platform behind L3 and L4 autonomous driving.</li>
+                        <li>Architected a global search engine serving technical data to thousands of engineers,
+                            sales and service users.</li>
+                        <li>Developed the internal AI/ML platform and custom DevOps for large engineering teams.</li>
+                    </ul>
+                </li>
+                <li class="role" data-reveal>
+                    <p class="role-date">2013 &rarr; 2014</p>
+                    <div>
+                        <h3 class="role-title">On-Site Technical Consultant</h3>
+                        <p class="role-org">Internal Revenue Service</p>
+                    </div>
+                    <ul class="role-points">
+                        <li>Delivered monitoring for critical taxpayer systems (eFiling, ACA, refunds) serving
+                            144 million+ citizens.</li>
+                    </ul>
+                </li>
+                <li class="role" data-reveal>
+                    <p class="role-date">2009 &rarr; 2013</p>
+                    <div>
+                        <h3 class="role-title">Software Developer</h3>
+                        <p class="role-org">AMD</p>
+                    </div>
+                    <ul class="role-points">
+                        <li>Built engineering tools for CPU design and private cloud infrastructure for developers.</li>
+                        <li>Helped establish the Enterprise Architecture practice; custom DevOps across .NET and
+                            Java.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="mt-10 grid gap-5 md:grid-cols-2" data-reveal>
+                <div class="note">
+                    <svg class="icon h-5 w-5 shrink-0 text-amber-300" aria-hidden="true"><use href="/icons.svg#award"/></svg>
+                    <p><span class="text-white">Honors.</span> General Motors Annual Top Coder, three times.
+                        Spotlight Awards from AMD, GM and Blue Cross NC.</p>
+                </div>
+                <div class="note">
+                    <svg class="icon h-5 w-5 shrink-0 text-amber-300" aria-hidden="true"><use href="/icons.svg#graduation"/></svg>
+                    <p><span class="text-white">Education.</span> BBA, Computer Information Systems, Texas State
+                        University. Summa Cum Laude, Outstanding Undergraduate Award.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-12">
+            <div class="mx-auto w-full max-w-xs lg:col-span-4" data-reveal>
+                <div class="portrait">
+                    <img src="/profile-pic-light.jpg" alt="Nathan Lloyd" width="1008" height="1008" loading="lazy"
+                         class="aspect-square w-full rounded-[1.4rem] object-cover">
+                </div>
+                <p class="mt-5 flex items-center justify-center gap-2 font-mono text-xs text-zinc-500">
+                    <svg class="icon h-3.5 w-3.5" aria-hidden="true">
+                        <use href="/icons.svg#map-pin"/>
+                    </svg>
+                    Windsor, Colorado
+                </p>
+            </div>
+            <div class="lg:col-span-8" data-reveal>
+                <p class="kicker">About</p>
+                <h2 class="section-title">Senior judgment. Hands on the keyboard.</h2>
+                <p class="section-lead">
+                    I'm an AI and cloud engineer with 20+ years building high-impact enterprise systems. At Blue
+                    Cross NC I integrate AI, architect serverless AWS solutions and lead digital transformation.
+                    I'm bringing that same quality directly to businesses as a freelance developer.
+                </p>
+                <p class="mt-5 text-lg leading-relaxed text-zinc-400">
+                    Away from the keyboard I'm a husband and father of three, a Cub Scout Den Leader, a youth
+                    sports coach, and a piano student alongside my oldest son. The same practical leadership,
+                    patience and focus on real results go into every project.
+                </p>
+                <p class="mt-8 font-mono text-sm text-cyan-300">Professional. Approachable. Results-driven.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6">
+            <div class="contact-card grid gap-12 p-8 sm:p-12 lg:grid-cols-2" data-reveal>
+                <div>
+                    <p class="kicker">Contact</p>
+                    <h2 class="section-title">Let's build something awesome.</h2>
+                    <p class="section-lead">
+                        Tell me about your AI or cloud challenge and I'll get back to you shortly.
+                    </p>
+                    <div class="mt-10 space-y-3">
+                        <a href="https://calendly.com/glows_covers44/30min" target="_blank" rel="noopener"
+                           class="contact-option">
+                            <svg class="icon h-5 w-5 text-cyan-300" aria-hidden="true">
+                                <use href="/icons.svg#calendar"/>
+                            </svg>
+                            <span class="flex-1">Schedule 30 minutes on Calendly</span>
+                            <svg class="icon h-4 w-4 text-zinc-500" aria-hidden="true">
+                                <use href="/icons.svg#arrow-up-right"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:contact@nathanlloyd.dev" class="contact-option">
+                            <svg class="icon h-5 w-5 text-cyan-300" aria-hidden="true">
+                                <use href="/icons.svg#mail"/>
+                            </svg>
+                            <span class="flex-1">contact@nathanlloyd.dev</span>
+                            <svg class="icon h-4 w-4 text-zinc-500" aria-hidden="true">
+                                <use href="/icons.svg#arrow-up-right"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">10TB</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Processed
-                        Daily
+
+                <div>
+                    <form id="contact-form" class="space-y-5">
+                        <label class="field">Your name
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <div class="honeypot" aria-hidden="true">
+                            <label>Your company name
+                                <input type="text" name="company" tabindex="-1" autocomplete="off">
+                            </label>
+                        </div>
+                        <label class="field">Your email
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
+                        <label class="field">Tell me about your AI or cloud challenge
+                            <textarea rows="5" name="message" required></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-light w-full py-3.5">
+                            Send message
+                            <svg class="icon h-4 w-4" aria-hidden="true">
+                                <use href="/icons.svg#send"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div id="contact-result" hidden class="contact-result">
+                        <span class="contact-result-icon">
+                            <svg class="icon icon-success h-7 w-7" aria-hidden="true"><use href="/icons.svg#check"/></svg>
+                            <svg class="icon icon-error h-7 w-7" aria-hidden="true"><use href="/icons.svg#alert"/></svg>
+                        </span>
+                        <p data-contact-message role="status" class="text-lg"></p>
+                        <button type="button" data-contact-retry class="btn btn-ghost px-5 py-2.5 text-sm">Try again</button>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">4</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Enterprises
-                    </div>
-                </div>
             </div>
         </div>
+    </section>
+</main>
 
-        <div class="flex justify-center items-center gap-8 mb-5 flex-wrap">
-            <img src="/images/logos/amd.svg" alt="AMD" class="h-20 w-36 dark:invert">
-            <img src="/images/logos/irs.svg" alt="IRS" class="h-16 w-16 dark:invert">
-            <img src="/images/logos/gm.svg" alt="General Motors" class="h-16 w-16 dark:invert">
-            <img src="/images/logos/bcbsnc.svg" alt="Blue Cross NC" class="h-16 w-32 dark:invert">
-        </div>
-
-        <div class="space-y-12">
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Principal Developer – Blue Cross Blue Shield NC
-                    (2021–present)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Delivered production AI systems transforming sales, operations, and field workflows.</li>
-                    <li>Embedded AI across developer workflows and the full SDLC.</li>
-                    <li>Architected serverless AWS platforms reducing cost, vulnerabilities, and complexity.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Senior Software Developer – General Motors (2014–2021)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Built AI annotation pipelines processing terabytes of public and internal data daily.</li>
-                    <li>Developed internal AI/ML cloud platform enabling rapid model training and deployment at scale.
-                    </li>
-                    <li>Delivered LiDAR-to-3D driving simulation platform supporting L3 & L4 autonomous vehicle
-                        development.
-                    <li>Created private cloud for large teams to rapidly develop custom software from one codebase in
-                        parallel workstreams.
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-semibold text-xl mb-4">On-Site Technical Consultant – IRS Internal Revenue Service
-                    (2013–2014)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Delivered monitoring for taxpayer systems serving 144M+ citizens (eFiling, ACA, refunds).</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Software Developer – AMD Advanced Micro Devices (2009–2013)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Implemented private cloud infrastructure for developers on SharePoint and AMD.com.</li>
-                    <li>Helped establish Enterprise Architecture practice by linking technology roadmaps to deployed
-                        assets.
-                    </li>
-                    <li>Delivered custom DevOps across .NET and Java stacks.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="mt-16 text-center">
-            <a href="Nathan-Lloyd-Resume-2026.pdf" target="_blank"
-               class="inline-flex items-center gap-3 text-primary hover:text-primary font-medium">
-                <i class="fas fa-download"></i> Download Full Resume
+<footer class="border-t border-white/10 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 text-sm text-zinc-500 md:flex-row">
+        <p>&copy; 2026 Nathan Lloyd. Freelance AI + Cloud Developer, Windsor, Colorado.</p>
+        <div class="flex items-center gap-2">
+            <a href="https://www.linkedin.com/in/nathan-lloyd-45590b2b" target="_blank" rel="noopener"
+               aria-label="LinkedIn" class="social">
+                <svg class="icon-brand h-4 w-4" aria-hidden="true">
+                    <use href="/icons.svg#linkedin"/>
+                </svg>
+            </a>
+            <a href="https://github.com/mangosmoothie" target="_blank" rel="noopener" aria-label="GitHub"
+               class="social">
+                <svg class="icon-brand h-4 w-4" aria-hidden="true">
+                    <use href="/icons.svg#github"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com/adventuresoluti" target="_blank" rel="noopener" aria-label="X"
+               class="social">
+                <svg class="icon-brand h-4 w-4" aria-hidden="true">
+                    <use href="/icons.svg#x"/>
+                </svg>
             </a>
         </div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-24 bg-slate-100 dark:bg-slate-800">
-    <div class="max-w-2xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-12">Let's Build Something Awesome</h2>
-        <form id="contact-form" class="space-y-6">
-            <div>
-                <label class="block text-sm font-medium mb-2">Your Name
-                    <input type="text" name="name" required
-                           class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30">
-                </label>
-            </div>
-            <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none">
-                <label class="block text-sm font-medium mb-2">Your Company Name
-                    <input type="text" name="company" tabindex="-1" autocomplete="off">
-                </label>
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Your Email
-                    <input type="email" name="email" required
-                           class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30">
-                </label>
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Tell me about your AI or cloud challenge
-                    <textarea rows="5" name="message" required
-                              class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"></textarea>
-                </label>
-            </div>
-            <button type="submit"
-                    class="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-2xl font-semibold text-lg transition">
-                Send Message
-            </button>
-        </form>
-
-        <div id="contact-result"
-             class="hidden opacity-0 transition-all duration-300 py-8 text-center min-h-[210px]"></div>
-
-        <div class="text-center mt-12">
-            <p class="text-sm text-slate-500">Or email me directly at
-                <a href="mailto:contact@nathanlloyd.dev"
-                   class="text-primary hover:underline">contact@nathanlloyd.dev</a>
-            </p>
-            <a href="https://calendly.com/glows_covers44/30min" target="_blank"
-               class="mt-4 inline-flex items-center justify-center gap-2 border border-accent text-accent hover:bg-accent/10 px-6 py-3 rounded-xl font-medium transition text-sm">
-                <i class="fas fa-calendar-alt"></i> Schedule directly on Calendly
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-slate-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <div class="flex justify-center gap-8 mb-8">
-            <a href="https://www.linkedin.com/in/nathan-lloyd-45590b2b" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/mangosmoothie" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-github fa-2x"></i></a>
-            <a href="https://twitter.com/adventuresoluti" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-x-twitter fa-2x"></i></a>
-        </div>
-        <p class="text-slate-400">Windsor, Colorado • Freelance AI + Cloud Developer</p>
-        <p class="text-xs text-slate-500 mt-8">© 2026 Nathan Lloyd. All Rights Reserved.</p>
     </div>
 </footer>
 
-<script>
-    function toggleDarkMode() {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-
-    (function () {
-        const t = localStorage.getItem('theme');
-        if (t === 'dark') document.documentElement.classList.add('dark');
-    })();
-
-    const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((email || '').trim());
-    const isHoneypotFilled = (data) => !!(data.company && String(data.company).trim());
-
-    function showContactResult(success, msg, retryData) {
-        const formEl = document.getElementById('contact-form');
-        const resultEl = document.getElementById('contact-result');
-        formEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-        formEl.style.opacity = '0';
-        formEl.style.transform = 'translateY(-4px)';
-        setTimeout(() => {
-            formEl.classList.add('hidden');
-            formEl.style.opacity = '';
-            formEl.style.transform = '';
-            let html = '';
-            if (success) {
-                html = '<div class="flex flex-col items-center"><i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i><p class="text-lg text-slate-700 dark:text-slate-300">' + msg + '</p></div>';
-            } else {
-                html = '<div class="flex flex-col items-center"><i class="fas fa-exclamation-circle text-4xl text-red-500 mb-3"></i><p class="text-red-600 dark:text-red-400 mb-4">' + msg + '</p><button type="button" onclick="retryContactForm()" class="px-6 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition">Try again?</button></div>';
-            }
-            resultEl.innerHTML = html;
-            resultEl.classList.remove('hidden');
-            resultEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-            resultEl.style.opacity = '0';
-            resultEl.style.transform = 'translateY(4px)';
-            void resultEl.offsetWidth;
-            resultEl.style.opacity = '1';
-            resultEl.style.transform = 'translateY(0)';
-            if (retryData) resultEl.dataset.retryData = JSON.stringify(retryData);
-        }, 300);
-    }
-
-    function retryContactForm() {
-        const formEl = document.getElementById('contact-form');
-        const resultEl = document.getElementById('contact-result');
-        const data = resultEl.dataset.retryData ? JSON.parse(resultEl.dataset.retryData) : {};
-        resultEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-        resultEl.style.opacity = '0';
-        resultEl.style.transform = 'translateY(-4px)';
-        setTimeout(() => {
-            resultEl.classList.add('hidden');
-            resultEl.style.opacity = '';
-            resultEl.style.transform = '';
-            resultEl.innerHTML = '';
-            delete resultEl.dataset.retryData;
-            formEl.classList.remove('hidden');
-            formEl.style.transition = 'opacity 300ms ease, transform 300ms ease';
-            formEl.style.opacity = '0';
-            formEl.style.transform = 'translateY(4px)';
-            if (data.name) formEl.querySelector('input[name="name"]').value = data.name;
-            if (data.email) formEl.querySelector('input[name="email"]').value = data.email;
-            if (data.message) formEl.querySelector('textarea[name="message"]').value = data.message;
-            void formEl.offsetWidth;
-            formEl.style.opacity = '1';
-            formEl.style.transform = 'translateY(0)';
-            setTimeout(() => {
-                formEl.style.transition = '';
-                formEl.style.opacity = '';
-                formEl.style.transform = '';
-            }, 300);
-        }, 300);
-    }
-
-    document.getElementById('contact-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const form = e.currentTarget;
-        const data = Object.fromEntries(new FormData(form).entries());
-        if (isHoneypotFilled(data)) {
-            showContactResult(true, 'Thank you, I will get back to you shortly.');
-            return;
-        }
-        if (!isValidEmail(data.email)) {
-            showContactResult(false, 'Please provide a valid email address.', data);
-            return;
-        }
-        const last = parseInt(localStorage.getItem('lastContact') || '0', 10);
-        if (Date.now() - last < 60000) {
-            showContactResult(false, 'Please wait a minute before sending another message.', data);
-            return;
-        }
-        const btn = form.querySelector('button[type="submit"]');
-        if (btn) btn.disabled = true;
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(data)
-            });
-            if (res.ok) {
-                localStorage.setItem('lastContact', Date.now().toString());
-                showContactResult(true, 'Thank you, I will get back to you shortly.');
-            } else {
-                const err = await res.json().catch(() => ({}));
-                showContactResult(false, 'Error: ' + (err.error || 'Failed to send'), data);
-            }
-        } catch {
-            showContactResult(false, 'Network error, please try again or email me.', data);
-        } finally {
-            if (btn) btn.disabled = false;
-        }
-    });
-</script>
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>
