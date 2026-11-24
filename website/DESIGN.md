@@ -69,17 +69,23 @@ A clean, professional, minimalist single-page portfolio website
 - Headlines are strong but never shouty.
 
 ## Layout & Components
-- **Hero**: Split layout on desktop (text and large circular headshot) with a subtle Rocky Mountains background.
-- **Sections**: Clear headings, generous spacing, card-based expertise grid.
-- **Navigation**: Simple sticky top nav.
+- **Hero**: Split layout on desktop (headline and rounded headshot with two floating proof chips) over the Rocky Mountains photo with drifting mist.
+- **Proof bar**: Card overlapping the hero with four metrics and the enterprise logos.
+- **Work**: Product cards with an illustrative UI mock, status badge (Live / Launching soon), outcomes and stack chips.
+- **Sections**: Left-aligned eyebrow, heading and lead; card-based services grid; experience timeline with a sticky summary column.
+- **Navigation**: Sticky top nav with dark-mode toggle, call-to-action button and a compact menu on mobile.
 - **Buttons**: Rounded, high contrast, clear CTAs.
+- **Icons**: Self-hosted SVG sprite (`public/icons.svg`); no third-party CDNs.
+- **Type**: Inter Variable, self-hosted.
 
 ## Key Pages / Sections
-- Hero (with main and supporting taglines)
+- Hero (main and supporting taglines)
+- Proof bar (metrics and enterprise logos)
+- Work (Adventure Guide, Social Media Manager, bmail, bizops)
+- Services (AI-first cards)
+- Experience (timeline, honors, education, resume download)
 - About (professional and personal blend)
-- Expertise (AI-first cards)
-- Results (generalized, metric-rich experience)
-- Contact (form + Calendly)
+- Contact (Calendly, email and form)
 
 ## Do's and Don'ts
 
