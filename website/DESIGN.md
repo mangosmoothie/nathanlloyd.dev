@@ -1,85 +1,80 @@
 ---
-version: "1.0"
-name: "Nathan Lloyd Personal Brand"
-description: "Professional, trustworthy, minimalist portfolio for a veteran Full Stack Cloud & AI Developer based in Colorado."
-audience: "Business owners, technical leaders, and teams seeking secure AI and cloud solutions."
-tone: "Authoritative yet approachable, calm confidence, practical leadership."
+version: "2.0"
+name: "Nathan Lloyd Personal Brand — Midnight"
+description: "Dark, precise, product-studio homepage for a veteran Full Stack Cloud & AI Developer who ships his own products."
+audience: "Technical leaders, founders, and teams seeking secure AI and cloud solutions."
+tone: "Confident, exact, engineer-to-engineer; calm rather than loud."
 
 # Brand Principles
 principles:
-  - "Clarity over cleverness"
-  - "Trust through simplicity and substance"
-  - "Colorado-inspired calm strength"
-  - "Results-focused minimalism"
+  - "Show shipped work first"
+  - "Precision over decoration"
+  - "Trust through substance and real metrics"
   - "Security and privacy as visible values"
 
 # Design Tokens
 colors:
-  primary: "#0F766E"           # Teal-700 - Trust, professionalism, mountain lake
-  accent: "#D97706"            # Amber-600 - Warm Colorado energy
-  background:
-    light: "#F8FAFC"
-    dark: "#0F172A"
+  ink: "#08090C"               # Page background
+  panel: "#0E1015"             # Cards, terminal, contact
+  line: "rgba(255,255,255,0.10)"
   text:
-    primary: "#1E2937"
-    secondary: "#64748B"
+    primary: "#F4F4F5"
+    secondary: "#A1A1AA"
+  accent:
+    cyan: "#67E8F9"            # Links, kickers, icons
+    violet: "#A78BFA"          # Gradient partner
+  status:
+    live: "#6EE7B7"
+    soon: "#FDE68A"
 
 typography:
   heading:
-    fontFamily: "Inter, system-ui, sans-serif"
-    fontWeight: 700
+    fontFamily: "Geist Variable, system-ui, sans-serif"
+    fontWeight: 600
+    letterSpacing: "-0.03em"
   body:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Geist Variable, system-ui, sans-serif"
     fontWeight: 400
-
-spacing:
-  base: 4
-  scale:
-    none: 0
-    xs: 4
-    sm: 8
-    md: 12
-    lg: 16
-    xl: 24
-    xxl: 32
-    xxxl: 48
-    huge: 64
+  mono:
+    fontFamily: "Geist Mono Variable, ui-monospace, monospace"
 
 borderRadius:
   default: "16px"
   large: "24px"
-
-shadows:
-  card: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+  pill: "9999px"
 ---
 
 # DESIGN.md – nathanlloyd.dev
 
 ## Overview
-A clean, professional, minimalist single-page portfolio website
+A dark, single-page homepage that presents Nathan as a principal-level engineer who designs, builds and operates products end to end.
 
 ## Visual Identity & Atmosphere
-- **Overall Feel**: Calm, confident, and grounded — like a clear Colorado mountain morning.
-- **Personality**: Professional who gets things done without unnecessary complexity.
-- **Color Story**: Deep teal (trust and nature) with warm amber accents (sunrise energy). Dark mode support for modern developer appeal.
+- **Overall Feel**: Night-mode developer tool: near-black surfaces, hairline borders, one cyan-to-violet glow.
+- **Personality**: Senior, exact, hands-on.
+- **Color Story**: Neutral zinc text on ink; cyan for interaction, violet only in gradients; green and amber reserved for deployment status.
 
 ## Typography
-- Clean, highly readable sans-serif (Inter).
-- Generous hierarchy and whitespace.
-- Headlines are strong but never shouty.
+- Geist for headings and body with tight tracking; Geist Mono for kickers, status, chips and the terminal.
+- Self-hosted fonts and icons; no third-party CDNs.
 
 ## Layout & Components
-- **Hero**: Split layout on desktop (text and large circular headshot) with a subtle Rocky Mountains background.
-- **Sections**: Clear headings, generous spacing, card-based expertise grid.
-- **Navigation**: Simple sticky top nav.
-- **Buttons**: Rounded, high contrast, clear CTAs.
+- **Navigation**: Floating pill nav with call-to-action and a compact menu on mobile.
+- **Hero**: Centered headline with gradient phrase, then a terminal window listing every deployment with live status.
+- **Stats band**: Four hairline-divided metrics.
+- **Work**: Split feature cards with illustrative UI mocks for live products; dashed cards for products shipping soon.
+- **Capabilities**: Hairline grid of six cells plus a `stack.yml` block.
+- **Experience**: Three-column rows (dates, role, outcomes), honors and education notes.
+- **Contact**: Single glowing card with Calendly, email and the form.
 
 ## Key Pages / Sections
-- Hero (with main and supporting taglines)
-- About (professional and personal blend)
-- Expertise (AI-first cards)
-- Results (generalized, metric-rich experience)
-- Contact (form + Calendly)
+- Hero and deployments terminal
+- Stats band and enterprise logos
+- Work (Adventure Guide, Social Media Manager, bmail, bizops)
+- Capabilities and stack
+- Experience
+- About
+- Contact
 
 ## Do's and Don'ts
 
@@ -90,9 +85,9 @@ A clean, professional, minimalist single-page portfolio website
 - Keep text concise and benefit-focused
 
 **Don't:**
-- Overuse technical jargon
+- Add a second accent color outside status indicators
 - Make it look like a generic corporate site
-- List programming languages as primary selling points
+- Lead with programming languages; the stack block stays secondary
 - Overload the hero with too much text
 
 ## Future Extensions
