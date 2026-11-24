@@ -1,85 +1,57 @@
 ---
-version: "1.0"
-name: "Nathan Lloyd Personal Brand"
-description: "Professional, trustworthy, minimalist portfolio for a veteran Full Stack Cloud & AI Developer based in Colorado."
-audience: "Business owners, technical leaders, and teams seeking secure AI and cloud solutions."
-tone: "Authoritative yet approachable, calm confidence, practical leadership."
+version: "2.0"
+name: "Nathan Lloyd Personal Brand — Editorial"
+description: "A magazine-style homepage for a veteran Full Stack Cloud & AI Developer, set like a well-edited profile."
+audience: "Business owners and technical leaders who want a trusted, senior practitioner."
+tone: "Calm, literary, confident. Authoritative without being corporate."
 
 # Brand Principles
 principles:
   - "Clarity over cleverness"
-  - "Trust through simplicity and substance"
-  - "Colorado-inspired calm strength"
-  - "Results-focused minimalism"
+  - "Trust through substance and real metrics"
+  - "Warmth through type, paper and Colorado"
   - "Security and privacy as visible values"
 
 # Design Tokens
 colors:
-  primary: "#0F766E"           # Teal-700 - Trust, professionalism, mountain lake
-  accent: "#D97706"            # Amber-600 - Warm Colorado energy
-  background:
-    light: "#F8FAFC"
-    dark: "#0F172A"
-  text:
-    primary: "#1E2937"
-    secondary: "#64748B"
-
+  paper: "#F5F1E8"
+  ink: "#1B1915"
+  rust: "#B4431B"              # Italic emphasis, section numbers, drop cap
 typography:
   heading:
-    fontFamily: "Inter, system-ui, sans-serif"
-    fontWeight: 700
-  body:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Fraunces Variable, ui-serif, Georgia, serif"
     fontWeight: 400
-
-spacing:
-  base: 4
-  scale:
-    none: 0
-    xs: 4
-    sm: 8
-    md: 12
-    lg: 16
-    xl: 24
-    xxl: 32
-    xxxl: 48
-    huge: 64
-
+  body:
+    fontFamily: "Inter Variable, system-ui, sans-serif"
+    fontWeight: 400
 borderRadius:
-  default: "16px"
-  large: "24px"
-
-shadows:
-  card: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+  default: "0px"
 ---
 
 # DESIGN.md – nathanlloyd.dev
 
 ## Overview
-A clean, professional, minimalist single-page portfolio website
+A single-page editorial profile. Paper background, ink rules, a rust accent used only for italics, numerals and the drop cap.
 
 ## Visual Identity & Atmosphere
-- **Overall Feel**: Calm, confident, and grounded — like a clear Colorado mountain morning.
-- **Personality**: Professional who gets things done without unnecessary complexity.
-- **Color Story**: Deep teal (trust and nature) with warm amber accents (sunrise energy). Dark mode support for modern developer appeal.
+- **Overall Feel**: A well-set magazine profile rather than a software landing page.
+- **Personality**: Senior, warm, exact.
+- **Color Story**: Warm paper, near-black ink, one rust accent. The portrait is grayscale; the mountain photograph carries the color.
 
 ## Typography
-- Clean, highly readable sans-serif (Inter).
-- Generous hierarchy and whitespace.
-- Headlines are strong but never shouty.
+- Fraunces for display, decks, leads and captions (italics for emphasis). Inter for body, labels and navigation.
+- Oversized display type, a drop cap, and small tracked uppercase labels.
+- Self-hosted fonts and icons; no third-party CDNs.
 
 ## Layout & Components
-- **Hero**: Split layout on desktop (text and large circular headshot) with a subtle Rocky Mountains background.
-- **Sections**: Clear headings, generous spacing, card-based expertise grid.
-- **Navigation**: Simple sticky top nav.
-- **Buttons**: Rounded, high contrast, clear CTAs.
-
-## Key Pages / Sections
-- Hero (with main and supporting taglines)
-- About (professional and personal blend)
-- Expertise (AI-first cards)
-- Results (generalized, metric-rich experience)
-- Contact (form + Calendly)
+- **Masthead**: A thin status bar, then a sticky rule-based header.
+- **Opening**: Full-width headline, grayscale portrait with caption, lead paragraph and a fact column.
+- **Figures**: Four oversized numerals separated by hairlines.
+- **Work**: Numbered entries with a deck and a metadata row.
+- **Practice**: A two-column roman-numeral index.
+- **Pull quote**: Full-bleed ink band.
+- **Experience**: Logo row, then year / organization / outcomes.
+- **Contact**: Underlined fields and a directory of ways to reach out.
 
 ## Do's and Don'ts
 
@@ -90,12 +62,7 @@ A clean, professional, minimalist single-page portfolio website
 - Keep text concise and benefit-focused
 
 **Don't:**
-- Overuse technical jargon
+- Round the corners or add drop shadows
 - Make it look like a generic corporate site
-- List programming languages as primary selling points
-- Overload the hero with too much text
-
-## Future Extensions
-- Blog section for AI/cloud thought leadership
-- Case studies with more detail
-- Testimonials (when available)
+- Lead with programming languages
+- Overload the opening with too much text
