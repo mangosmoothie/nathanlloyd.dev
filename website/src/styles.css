@@ -1,105 +1,43 @@
 @import "tailwindcss";
+@import "@fontsource-variable/outfit";
 
 @theme {
-  --color-primary: #0F766E;
-  --color-accent: #D97706;
-  --color-brand-bg-light: #F8FAFC;
-  --color-brand-bg-dark: #0F172A;
-  --color-brand-text-primary: #1E2937;
-  --color-brand-text-secondary: #64748B;
+  --font-sans: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-cream: #f4efe4;
+  --color-spruce: #12352b;
+  --color-lime: #e2ff54;
+  --color-ink: #14221c;
 }
 
-@variant dark (&:where(.dark, .dark *));
+html { scroll-padding-top: 5rem; }
+::selection { background: var(--color-lime); color: var(--color-spruce); }
 
-.logo-bcbs { filter: brightness(0); }
+.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon-brand { fill: currentColor; }
 
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+.honeypot { position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; }
 #contact-form:not([hidden]),
-.contact-result:not([hidden]) {
-  animation: contact-swap 300ms ease both;
+.contact-result:not([hidden]) { animation: rise 280ms ease both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
 }
-.contact-result[data-state="success"] .contact-result-icon::before { content: "\f058"; color: #22c55e; }
-.contact-result[data-state="error"] .contact-result-icon::before { content: "\f06a"; color: #ef4444; }
-@keyframes contact-swap {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+.contact-result[data-state="success"] .icon-error,
+.contact-result[data-state="error"] .icon-success { display: none; }
 
-.hero-mountains {
-  background-size: cover;
-  background-position: 50% 42%;
-  background-attachment: fixed;
-}
-@media (max-width: 767px) {
-  .hero-mountains { background-attachment: scroll; }
-}
-.hero-scrim {
-  z-index: 1;
-  background-image: 
-    linear-gradient(to bottom, rgba(0,0,0,0.09) 0%, rgba(0,0,0,0.06) 28%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0.45) 76%, rgba(0,0,0,0.58) 100%),
-    linear-gradient(to right, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.14) 29%, transparent 46%);
-}
-.light-rays {
-  z-index: 4;
-  background-image:
-    linear-gradient(108deg, transparent 0% 14%, rgba(255,232,180,0.062) 15.3% 18.1%, transparent 19.4% 100%),
-    linear-gradient(114deg, transparent 0% 25%, rgba(255,232,180,0.078) 26.7% 28.4%, transparent 29.6% 100%),
-    linear-gradient(110deg, transparent 0% 36.5%, rgba(255,232,180,0.051) 38.2% 41.5%, transparent 43% 100%),
-    linear-gradient(106deg, transparent 0% 49%, rgba(255,232,180,0.085) 50.8% 53.9%, transparent 55.4% 100%),
-    linear-gradient(112deg, transparent 0% 62%, rgba(255,232,180,0.067) 63.5% 66.2%, transparent 67.7% 100%),
-    linear-gradient(109deg, transparent 0% 75%, rgba(255,232,180,0.059) 76.8% 79.3%, transparent 80.8% 100%);
-  animation: rays-drift 58s linear infinite;
-  mix-blend-mode: soft-light;
-}
-.fog-layer {
-  z-index: 3;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  filter: blur(24px);
-  opacity: 0.15;
-  will-change: transform;
-}
-.fog-1 {
-  top: 30%;
-  height: 58%;
-  background: 
-    radial-gradient(ellipse 52% 68% at 19% 64%, rgba(255,255,255,0.82) 0%, transparent 68%),
-    radial-gradient(ellipse 45% 52% at 82% 71%, rgba(255,255,255,0.72) 0%, transparent 64%);
-  animation: fog-drift-1 47s ease-in-out infinite alternate;
-}
-.fog-2 {
-  top: 26%;
-  height: 52%;
-  background: 
-    radial-gradient(ellipse 60% 46% at 48% 59%, rgba(255,255,255,0.78) 0%, transparent 62%),
-    radial-gradient(ellipse 35% 62% at 12% 48%, rgba(255,255,255,0.58) 0%, transparent 72%);
-  animation: fog-drift-2 59s ease-in-out infinite alternate;
-  opacity: 0.12;
-}
-.fog-3 {
-  top: 38%;
-  height: 48%;
-  background: 
-    radial-gradient(ellipse 68% 38% at 67% 78%, rgba(255,255,255,0.68) 0%, transparent 58%);
-  animation: fog-drift-3 36s ease-in-out infinite alternate;
-  opacity: 0.18;
-  filter: blur(30px);
-}
-@keyframes fog-drift-1 {
-  from { transform: translateX(-7.5%) translateY(0.8%); }
-  to { transform: translateX(9.5%) translateY(-1.2%); }
-}
-@keyframes fog-drift-2 {
-  from { transform: translateX(5%) translateY(-0.6%); }
-  to { transform: translateX(-8%) translateY(1.1%); }
-}
-@keyframes fog-drift-3 {
-  from { transform: translateX(-5.5%) translateY(1.4%); }
-  to { transform: translateX(7%) translateY(-0.9%); }
-}
-@keyframes rays-drift {
-  from { background-position: 0 0; }
-  to { background-position: 165px 0; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .light-rays, .fog-layer { animation: none !important; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
 }

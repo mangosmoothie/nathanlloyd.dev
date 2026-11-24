@@ -4,315 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Lloyd | Full Stack Cloud & AI Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description" content="Nathan Lloyd builds secure AI and cloud products on AWS. 20+ years at AMD, the IRS, General Motors and Blue Cross NC.">
+    <meta name="theme-color" content="#12352b">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nathanlloyd.dev/">
+    <meta property="og:title" content="Nathan Lloyd | Full Stack Cloud & AI Developer">
+    <meta property="og:description" content="Enterprise judgment. Products you can open today.">
+    <meta property="og:image" content="https://nathanlloyd.dev/profile-pic-light.jpg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/src/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"Person","name":"Nathan Lloyd","jobTitle":"Full Stack Cloud & AI Developer","url":"https://nathanlloyd.dev","email":"mailto:contact@nathanlloyd.dev","image":"https://nathanlloyd.dev/profile-pic-light.jpg","address":{"@type":"PostalAddress","addressLocality":"Windsor","addressRegion":"CO"},"sameAs":["https://www.linkedin.com/in/nathan-lloyd-45590b2b","https://github.com/mangosmoothie","https://twitter.com/adventuresoluti"]}
+    </script>
 </head>
-<body class="bg-brand-bg-light text-brand-text-primary dark:bg-brand-bg-dark dark:text-white">
+<body class="bg-cream font-sans text-ink antialiased">
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-spruce focus:px-4 focus:py-2 focus:text-lime">Skip to content</a>
 
-<!-- Navigation -->
-<nav class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800">
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-        <a href="#" class="text-2xl font-semibold text-primary dark:text-primary">Nathan Lloyd</a>
-        <div class="flex gap-8 text-sm font-medium">
-            <a href="#about" class="hover:text-primary transition-colors">About</a>
-            <a href="#expertise" class="hover:text-primary transition-colors">Expertise</a>
-            <a href="#results" class="hover:text-primary transition-colors">Results</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-        </div>
-        <button type="button" data-theme-toggle aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:block"></i>
-        </button>
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+        <a href="#" class="text-lg font-semibold tracking-tight">Nathan Lloyd</a>
+        <nav class="hidden items-center gap-7 text-sm font-medium md:flex" aria-label="Primary">
+            <a href="#work" class="hover:text-spruce/60">Work</a>
+            <a href="#practice" class="hover:text-spruce/60">Practice</a>
+            <a href="#experience" class="hover:text-spruce/60">Experience</a>
+            <a href="#about" class="hover:text-spruce/60">About</a>
+            <a href="#contact" class="rounded-full bg-spruce px-5 py-2.5 text-lime">Start a project</a>
+        </nav>
+        <details data-nav-menu class="relative md:hidden">
+            <summary aria-label="Menu" class="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-full bg-spruce text-lime [&::-webkit-details-marker]:hidden"><svg class="icon h-5 w-5" aria-hidden="true"><use href="/icons.svg#menu"/></svg></summary>
+            <nav class="absolute right-0 top-full mt-3 grid w-52 rounded-3xl bg-spruce p-2 text-sm font-medium text-cream" aria-label="Mobile">
+                <a href="#work" class="rounded-2xl px-4 py-3 hover:bg-white/10">Work</a>
+                <a href="#practice" class="rounded-2xl px-4 py-3 hover:bg-white/10">Practice</a>
+                <a href="#experience" class="rounded-2xl px-4 py-3 hover:bg-white/10">Experience</a>
+                <a href="#about" class="rounded-2xl px-4 py-3 hover:bg-white/10">About</a>
+                <a href="#contact" class="rounded-2xl bg-lime px-4 py-3 text-spruce">Start a project</a>
+            </nav>
+        </details>
     </div>
-</nav>
+</header>
 
-<!-- Hero -->
-<section class="min-h-screen flex items-center py-16 md:py-20 relative overflow-hidden">
-    <!-- Base mountain background -->
-    <div class="hero-mountains absolute inset-0"
-         style="background-image: url('/images/rocky-mountains-dawn.jpg');"></div>
-
-    <!-- Subtle contrast scrim for text readability -->
-    <div class="hero-scrim absolute inset-0" aria-hidden="true"></div>
-
-    <!-- Gentle drifting mist layers -->
-    <div class="fog-layer fog-1 absolute inset-x-0" aria-hidden="true"></div>
-    <div class="fog-layer fog-2 absolute inset-x-0" aria-hidden="true"></div>
-    <div class="fog-layer fog-3 absolute inset-x-0" aria-hidden="true"></div>
-
-    <!-- Faint drifting light rays (painted above mist for sky effect) -->
-    <div class="light-rays absolute inset-0" aria-hidden="true"></div>
-
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <!-- Left: Text -->
-        <div class="text-white">
-            <p class="text-sm tracking-widest mb-4">WINDSOR, COLORADO</p>
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Nathan Lloyd</h1>
-
-            <p class="text-3xl md:text-4xl font-light leading-tight mb-8">
-                Empowering your business with intelligent AI and cloud solutions.
+<main id="main">
+    <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-8 lg:grid-cols-12 lg:pt-14">
+        <div class="lg:col-span-7">
+            <p class="inline-flex items-center gap-2 rounded-full bg-spruce/10 px-4 py-1.5 text-sm font-medium text-spruce">
+                <span class="h-2 w-2 rounded-full bg-spruce" aria-hidden="true"></span>
+                Windsor, Colorado · taking new projects
             </p>
-
-            <p class="text-xl max-w-xl leading-relaxed mb-10">
-                Delivering secure, private AI and cloud solutions with 20+ years of proven enterprise results.
+            <h1 class="mt-6 text-balance text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+                Enterprise judgment.
+                <span class="mt-3 block w-fit bg-lime px-3">Products you can open.</span>
+            </h1>
+            <p class="mt-7 max-w-xl text-lg leading-relaxed text-ink/75 sm:text-xl">
+                I'm Nathan Lloyd. For 20+ years I built secure systems at AMD, the IRS, General Motors and Blue
+                Cross NC. Now I design, ship and run AI and cloud products on AWS, for clients and under my own name.
             </p>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contact"
-                   class="bg-white text-primary px-8 py-4 rounded-2xl font-semibold hover:bg-primary/10 transition-all text-lg text-center">
-                    Book a Discovery Call
-                </a>
-                <a href="Nathan-Lloyd-Resume-2026.pdf" target="_blank"
-                   class="border border-accent hover:border-accent px-8 py-4 rounded-2xl font-semibold transition-all text-lg flex items-center justify-center gap-2 text-accent">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-spruce px-7 py-4 font-medium text-lime">Start a project<svg class="icon h-5 w-5" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg></a>
+                <a href="#work" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-spruce px-7 py-4 font-medium">See the work</a>
             </div>
         </div>
-
-        <!-- Right: Profile Picture -->
-        <div class="flex justify-center md:justify-end">
-            <div class="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white/30 shadow-2xl">
-                <img src="/profile-pic-light.jpg"
-                     alt="Nathan Lloyd - Headshot"
-                     class="w-full h-full object-cover">
+        <div class="relative lg:col-span-5">
+            <div class="overflow-hidden rounded-[2rem]">
+                <img src="/images/rocky-mountains-dawn.jpg" alt="Rocky Mountains at dawn" width="1408" height="704" class="aspect-[4/5] w-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -left-2 flex items-center gap-3 rounded-full bg-cream p-2 pr-5 shadow-xl sm:-left-8">
+                <img src="/profile-pic-light.jpg" alt="Nathan Lloyd" width="1008" height="1008" class="h-16 w-16 rounded-full object-cover">
+                <span><span class="block text-sm font-semibold">Nathan Lloyd</span><span class="block text-xs text-ink/60">Principal Developer, Blue Cross NC</span></span>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About -->
-<section id="about" class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-12">About Me</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-lg leading-relaxed mb-6">
-                    AI & Cloud Engineer with 20+ years building high-impact enterprise systems. At Blue Cross Blue
-                    Shield NC, I integrate AI, architect serverless AWS solutions, and lead digital transformation.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Transitioning to freelance to deliver the same enterprise quality and secure, intelligent AI and
-                    cloud solutions directly to businesses.
-                </p>
-            </div>
-            <div class="text-lg leading-relaxed">
-                <p class="mb-6">
-                    Husband and father of three in Windsor, Colorado.
-                    Cub Scout Den Leader, youth sports coach, and learning piano with my oldest son.
-                    I bring the same practical leadership, patience, and focus on real results to every client project.
-                </p>
-                <p>
-                    <span class="text-accent font-semibold">
-                        Professional. Approachable. Results-driven.
-                    </span>
-                </p>
-            </div>
+    <section class="mt-10 bg-lime text-spruce" aria-label="Record">
+        <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-10 lg:grid-cols-4">
+            <div><dd class="text-4xl font-semibold tracking-tight sm:text-5xl">20+</dd><dt class="mt-1 text-sm font-medium">years shipping</dt></div>
+            <div><dd class="text-4xl font-semibold tracking-tight sm:text-5xl">144M+</dd><dt class="mt-1 text-sm font-medium">citizens served, IRS</dt></div>
+            <div><dd class="text-4xl font-semibold tracking-tight sm:text-5xl">10 TB</dd><dt class="mt-1 text-sm font-medium">processed daily at GM</dt></div>
+            <div><dd class="text-4xl font-semibold tracking-tight sm:text-5xl">3&times;</dd><dt class="mt-1 text-sm font-medium">GM Annual Top Coder</dt></div>
+        </dl>
+    </section>
+
+    <section id="work" class="mx-auto max-w-6xl px-5 py-20">
+        <div class="flex flex-wrap items-end justify-between gap-4" data-reveal>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Work in the world</h2>
+            <p class="max-w-sm text-ink/70">Four products. Two live, two on the way. All of them mine from idea to operations.</p>
         </div>
-    </div>
-</section>
-
-<!-- Expertise -->
-<section id="expertise" class="py-24 bg-slate-100 dark:bg-slate-800">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-16">Expertise</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Enterprise Grade Security</h3>
-                <p>Hardened enterprise solutions with IAM, encryption, and multi-layered protections against modern
-                    threats.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Data Privacy</h3>
-                <p>Privacy-first design — your data remains private and fully under your control.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">AI & Autonomous Agents</h3>
-                <p>Custom AI agents, GenAI applications, chatbots, and transparent automation for content and
-                    processes.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">AWS Cloud Architecture</h3>
-                <p>AWS Serverless, Bedrock, and scalable compute delivering resilient, cost-efficient
-                    infrastructure.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Data Engineering & ML</h3>
-                <p>Large-scale pipelines, vector databases, natural language processing, and predictive analytics.</p>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm">
-                <h3 class="font-semibold text-xl mb-4 text-primary">Cost Optimized Solutions</h3>
-                <p>Cost-optimized solutions through rapid development and efficient pay-as-you-grow resource
-                    management.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Results -->
-<section id="results" class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-8">Proven Results</h2>
-        <div class="mb-6">
-            <p class="text-center text-sm font-semibold tracking-widest text-teal-600 dark:text-teal-400 mb-4">IMPACT AT
-                A GLANCE</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">20+</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Years</div>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">144M+</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Citizens
-                        Served
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">10TB</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Processed
-                        Daily
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl text-center shadow-sm">
-                    <div class="text-4xl font-bold text-teal-700 dark:text-teal-500">4</div>
-                    <div class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-1">Enterprises
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex justify-center items-center gap-8 mb-5 flex-wrap">
-            <img src="/images/logos/amd.svg" alt="AMD" class="h-20 w-36 dark:invert">
-            <img src="/images/logos/irs.svg" alt="IRS" class="h-16 w-16 dark:invert">
-            <img src="/images/logos/gm.svg" alt="General Motors" class="h-16 w-16 dark:invert">
-            <img src="/images/logos/bcbsnc.svg" alt="Blue Cross NC" class="h-16 w-32 dark:invert">
-        </div>
-
-        <div class="space-y-12">
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Principal Developer – Blue Cross Blue Shield NC
-                    (2021–present)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Delivered production AI systems transforming sales, operations, and field workflows.</li>
-                    <li>Embedded AI across developer workflows and the full SDLC.</li>
-                    <li>Architected serverless AWS platforms reducing cost, vulnerabilities, and complexity.</li>
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+            <article class="flex flex-col rounded-[2rem] bg-spruce p-8 text-cream sm:p-10" data-reveal>
+                <div class="flex items-center justify-between"><span class="rounded-full bg-lime px-3 py-1 text-xs font-semibold text-spruce">Live</span><span class="text-sm text-cream/60">01</span></div>
+                <h3 class="mt-8 text-3xl font-semibold tracking-tight">Adventure Guide</h3>
+                <p class="mt-4 leading-relaxed text-cream/80">Invite-only meeting planner for Cub Scout packs. Pick an Adventure and a time limit, and AI drafts activities and a prep list that fit. Published agendas land on the pack calendar.</p>
+                <ul class="mt-6 space-y-2 text-sm text-cream/80">
+                    <li>Content guardrails, section locks and per-leader quotas</li>
+                    <li>Leader and Member roles, invites by email</li>
+                    <li>Next.js on serverless AWS, mail through Amazon SES</li>
                 </ul>
-            </div>
-
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Senior Software Developer – General Motors (2014–2021)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Built AI annotation pipelines processing terabytes of public and internal data daily.</li>
-                    <li>Developed internal AI/ML cloud platform enabling rapid model training and deployment at scale.
-                    </li>
-                    <li>Delivered LiDAR-to-3D driving simulation platform supporting L3 & L4 autonomous vehicle
-                        development.
-                    <li>Created private cloud for large teams to rapidly develop custom software from one codebase in
-                        parallel workstreams.
-                    </li>
+                <a href="https://scoutsadventureguide.com" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-8 font-medium text-lime">scoutsadventureguide.com<svg class="icon h-4 w-4" aria-hidden="true"><use href="/icons.svg#arrow-up-right"/></svg></a>
+            </article>
+            <article class="flex flex-col rounded-[2rem] bg-spruce p-8 text-cream sm:p-10" data-reveal>
+                <div class="flex items-center justify-between"><span class="rounded-full bg-lime px-3 py-1 text-xs font-semibold text-spruce">Live · private</span><span class="text-sm text-cream/60">02</span></div>
+                <h3 class="mt-8 text-3xl font-semibold tracking-tight">Social Media Manager</h3>
+                <p class="mt-4 leading-relaxed text-cream/80">A calendar in, on-brand posts out. Each event is drafted in a reusable voice, reviewed, then published to LinkedIn, X and Facebook on time.</p>
+                <ul class="mt-6 space-y-2 text-sm text-cream/80">
+                    <li>Personalities carry voice and content strategy</li>
+                    <li>Sync that handles reschedules, edits and cancellations</li>
+                    <li>A token queue for other automations, plus a full audit trail</li>
                 </ul>
-            </div>
+                <p class="mt-auto pt-8 text-sm text-cream/50">Next.js · TypeScript · AWS serverless · Generative AI</p>
+            </article>
+            <article class="rounded-[2rem] border-2 border-spruce p-8 sm:p-10" data-reveal>
+                <div class="flex items-center justify-between"><span class="rounded-full bg-spruce/10 px-3 py-1 text-xs font-semibold">In development</span><span class="text-sm text-ink/40">03</span></div>
+                <h3 class="mt-8 text-3xl font-semibold tracking-tight">bmail</h3>
+                <p class="mt-4 leading-relaxed text-ink/75">Bot-friendly email that is easy to run in your own AWS account. Mailboxes that agents and automations can send from and read.</p>
+            </article>
+            <article class="rounded-[2rem] border-2 border-spruce p-8 sm:p-10" data-reveal>
+                <div class="flex items-center justify-between"><span class="rounded-full bg-spruce/10 px-3 py-1 text-xs font-semibold">In development</span><span class="text-sm text-ink/40">04</span></div>
+                <h3 class="mt-8 text-3xl font-semibold tracking-tight">bizops</h3>
+                <p class="mt-4 leading-relaxed text-ink/75">A collaborative website for business operations: one shared place for a team to plan, track and run the work together.</p>
+            </article>
+        </div>
+    </section>
 
-            <div>
-                <h3 class="font-semibold text-xl mb-4">On-Site Technical Consultant – IRS Internal Revenue Service
-                    (2013–2014)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Delivered monitoring for taxpayer systems serving 144M+ citizens (eFiling, ACA, refunds).</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-semibold text-xl mb-4">Software Developer – AMD Advanced Micro Devices (2009–2013)</h3>
-                <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li>Implemented private cloud infrastructure for developers on SharePoint and AMD.com.</li>
-                    <li>Helped establish Enterprise Architecture practice by linking technology roadmaps to deployed
-                        assets.
-                    </li>
-                    <li>Delivered custom DevOps across .NET and Java stacks.</li>
-                </ul>
+    <section id="practice" class="bg-spruce text-cream">
+        <div class="mx-auto max-w-6xl px-5 py-20">
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl" data-reveal>How I can help</h2>
+            <div class="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3" data-reveal>
+                <div><p class="font-semibold text-lime">01</p><h3 class="mt-3 text-xl font-semibold">AI &amp; autonomous agents</h3><p class="mt-2 text-cream/75">Custom agents, GenAI applications, chatbots and transparent automation.</p></div>
+                <div><p class="font-semibold text-lime">02</p><h3 class="mt-3 text-xl font-semibold">AWS cloud architecture</h3><p class="mt-2 text-cream/75">Serverless AWS and Bedrock platforms, resilient under load and cost-efficient at rest.</p></div>
+                <div><p class="font-semibold text-lime">03</p><h3 class="mt-3 text-xl font-semibold">Enterprise-grade security</h3><p class="mt-2 text-cream/75">Least-privilege IAM, encryption and layered protection.</p></div>
+                <div><p class="font-semibold text-lime">04</p><h3 class="mt-3 text-xl font-semibold">Data privacy</h3><p class="mt-2 text-cream/75">Your data stays private and fully under your control.</p></div>
+                <div><p class="font-semibold text-lime">05</p><h3 class="mt-3 text-xl font-semibold">Data engineering &amp; ML</h3><p class="mt-2 text-cream/75">Large-scale pipelines, search, natural language and predictive analytics.</p></div>
+                <div><p class="font-semibold text-lime">06</p><h3 class="mt-3 text-xl font-semibold">Cost-optimized delivery</h3><p class="mt-2 text-cream/75">Fast to build, and spend that scales with use.</p></div>
             </div>
         </div>
+    </section>
 
-        <div class="mt-16 text-center">
-            <a href="Nathan-Lloyd-Resume-2026.pdf" target="_blank"
-               class="inline-flex items-center gap-3 text-primary hover:text-primary font-medium">
-                <i class="fas fa-download"></i> Download Full Resume
-            </a>
+    <section id="experience" class="mx-auto max-w-6xl px-5 py-20">
+        <div class="flex flex-wrap items-end justify-between gap-6" data-reveal>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Where it was proven</h2>
+            <a href="/Nathan-Lloyd-Resume-2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-medium underline decoration-2 underline-offset-4">Download the resume<svg class="icon h-4 w-4" aria-hidden="true"><use href="/icons.svg#download"/></svg></a>
         </div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-24 bg-slate-100 dark:bg-slate-800">
-    <div class="max-w-2xl mx-auto px-6">
-        <h2 class="text-4xl font-semibold text-center mb-12">Let's Build Something Awesome</h2>
-        <form id="contact-form" class="space-y-6">
-            <div>
-                <label class="block text-sm font-medium mb-2">Your Name
-                    <input type="text" name="name" required
-                           class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30">
-                </label>
-            </div>
-            <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none">
-                <label class="block text-sm font-medium mb-2">Your Company Name
-                    <input type="text" name="company" tabindex="-1" autocomplete="off">
-                </label>
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Your Email
-                    <input type="email" name="email" required
-                           class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30">
-                </label>
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Tell me about your AI or cloud challenge
-                    <textarea rows="5" name="message" required
-                              class="w-full px-5 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"></textarea>
-                </label>
-            </div>
-            <button type="submit"
-                    class="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-2xl font-semibold text-lg transition">
-                Send Message
-            </button>
-        </form>
-
-        <div id="contact-result" hidden class="contact-result py-8 text-center min-h-[210px]">
-            <i class="contact-result-icon fas text-5xl mb-4" aria-hidden="true"></i>
-            <p data-contact-message role="status" class="text-lg text-slate-700 dark:text-slate-300 mb-4"></p>
-            <button type="button" data-contact-retry
-                    class="px-6 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition">
-                Try again?
-            </button>
+        <div class="mt-8 flex flex-wrap items-center gap-10 opacity-80" data-reveal>
+            <img src="/images/logos/bcbsnc.svg" alt="Blue Cross NC" class="h-8 w-auto">
+            <img src="/images/logos/gm.svg" alt="General Motors" class="h-9 w-9">
+            <img src="/images/logos/irs.svg" alt="IRS" class="h-9 w-auto">
+            <img src="/images/logos/amd.svg" alt="AMD" class="h-8 w-auto">
         </div>
+        <ol class="mt-10 divide-y-2 divide-spruce/15 border-y-2 border-spruce/15">
+            <li class="grid gap-3 py-8 md:grid-cols-[9rem_1fr]" data-reveal>
+                <p class="font-semibold text-spruce">2021 – now</p>
+                <div><h3 class="text-2xl font-semibold tracking-tight">Principal Developer, Blue Cross NC</h3><p class="mt-3 max-w-3xl leading-relaxed text-ink/75">Production AI for meetings, sales conversion and async workflows. Serverless AWS that cut cost, vulnerabilities and complexity. AI across the whole delivery lifecycle, and lead on paperless and digital wallet transformation.</p></div>
+            </li>
+            <li class="grid gap-3 py-8 md:grid-cols-[9rem_1fr]" data-reveal>
+                <p class="font-semibold text-spruce">2014 – 2021</p>
+                <div><h3 class="text-2xl font-semibold tracking-tight">Senior Software Developer, General Motors</h3><p class="mt-3 max-w-3xl leading-relaxed text-ink/75">AI pipelines at about 10 TB a day. The LiDAR-to-3D simulation behind L3 and L4 driving. A global technical search engine, plus the internal AI/ML platform and DevOps for large engineering teams. Annual Top Coder, three times.</p></div>
+            </li>
+            <li class="grid gap-3 py-8 md:grid-cols-[9rem_1fr]" data-reveal>
+                <p class="font-semibold text-spruce">2013 – 2014</p>
+                <div><h3 class="text-2xl font-semibold tracking-tight">On-Site Consultant, IRS</h3><p class="mt-3 max-w-3xl leading-relaxed text-ink/75">Monitoring for eFiling, ACA and refunds, the systems serving 144 million+ citizens.</p></div>
+            </li>
+            <li class="grid gap-3 py-8 md:grid-cols-[9rem_1fr]" data-reveal>
+                <p class="font-semibold text-spruce">2009 – 2013</p>
+                <div><h3 class="text-2xl font-semibold tracking-tight">Software Developer, AMD</h3><p class="mt-3 max-w-3xl leading-relaxed text-ink/75">Engineering tools for CPU design, private cloud infrastructure, and the early Enterprise Architecture practice. BBA, Computer Information Systems, Texas State University, summa cum laude.</p></div>
+            </li>
+        </ol>
+    </section>
 
-        <div class="text-center mt-12">
-            <p class="text-sm text-slate-500">Or email me directly at
-                <a href="mailto:contact@nathanlloyd.dev"
-                   class="text-primary hover:underline">contact@nathanlloyd.dev</a>
-            </p>
-            <a href="https://calendly.com/glows_covers44/30min" target="_blank"
-               class="mt-4 inline-flex items-center justify-center gap-2 border border-accent text-accent hover:bg-accent/10 px-6 py-3 rounded-xl font-medium transition text-sm">
-                <i class="fas fa-calendar-alt"></i> Schedule directly on Calendly
-            </a>
+    <section id="about" class="bg-spruce text-cream">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 lg:grid-cols-2">
+            <div data-reveal>
+                <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">The person on the other end of the call</h2>
+                <p class="mt-6 text-lg leading-relaxed text-cream/80">I'm an AI and cloud engineer with 20+ years building high-impact enterprise systems. At Blue Cross NC I integrate AI, architect serverless AWS solutions and lead digital transformation. Freelance is how that same quality reaches businesses directly.</p>
+                <p class="mt-5 text-lg leading-relaxed text-cream/80">I'm a husband and father of three in Windsor, Colorado. I lead a Cub Scout den, coach youth sports and I'm learning piano with my oldest son. Practical leadership, patience and a focus on real results come with every project.</p>
+                <p class="mt-8 inline-block rounded-full bg-lime px-4 py-2 text-sm font-semibold text-spruce">Professional. Approachable. Results-driven.</p>
+            </div>
+            <div class="overflow-hidden rounded-[2rem]" data-reveal>
+                <img src="/profile-pic-light.jpg" alt="Nathan Lloyd" width="1008" height="1008" loading="lazy" class="aspect-square w-full object-cover">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-slate-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <div class="flex justify-center gap-8 mb-8">
-            <a href="https://www.linkedin.com/in/nathan-lloyd-45590b2b" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/mangosmoothie" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-github fa-2x"></i></a>
-            <a href="https://twitter.com/adventuresoluti" target="_blank" class="hover:text-primary"><i
-                    class="fab fa-x-twitter fa-2x"></i></a>
+    <section id="contact" class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-2">
+        <div data-reveal>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Tell me the problem.</h2>
+            <p class="mt-5 max-w-md text-lg leading-relaxed text-ink/75">I'll get back to you shortly. Or skip the form and book the time.</p>
+            <div class="mt-8 flex flex-col gap-3">
+                <a href="https://calendly.com/glows_covers44/30min" target="_blank" rel="noopener" class="inline-flex items-center justify-between rounded-full bg-spruce px-6 py-4 font-medium text-lime">30 minutes on Calendly<svg class="icon h-5 w-5" aria-hidden="true"><use href="/icons.svg#arrow-up-right"/></svg></a>
+                <a href="mailto:contact@nathanlloyd.dev" class="inline-flex items-center justify-between rounded-full border-2 border-spruce px-6 py-4 font-medium">contact@nathanlloyd.dev<svg class="icon h-5 w-5" aria-hidden="true"><use href="/icons.svg#arrow-up-right"/></svg></a>
+            </div>
         </div>
-        <p class="text-slate-400">Windsor, Colorado • Freelance AI + Cloud Developer</p>
-        <p class="text-xs text-slate-500 mt-8">© 2026 Nathan Lloyd. All Rights Reserved.</p>
+        <div class="rounded-[2rem] bg-white p-7 sm:p-9" data-reveal>
+            <form id="contact-form" class="space-y-4">
+                <label class="block text-sm font-medium">Your name<input type="text" name="name" required autocomplete="name" class="mt-2 block w-full rounded-2xl bg-cream px-4 py-3 text-base font-normal outline-none ring-spruce/30 focus:ring-4"></label>
+                <div class="honeypot" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+                <label class="block text-sm font-medium">Your email<input type="email" name="email" required autocomplete="email" class="mt-2 block w-full rounded-2xl bg-cream px-4 py-3 text-base font-normal outline-none ring-spruce/30 focus:ring-4"></label>
+                <label class="block text-sm font-medium">Your AI or cloud challenge<textarea rows="5" name="message" required class="mt-2 block w-full rounded-2xl bg-cream px-4 py-3 text-base font-normal outline-none ring-spruce/30 focus:ring-4"></textarea></label>
+                <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-lime px-6 py-4 font-semibold text-spruce">Send message<svg class="icon h-5 w-5" aria-hidden="true"><use href="/icons.svg#send"/></svg></button>
+            </form>
+            <div id="contact-result" hidden class="contact-result flex min-h-80 flex-col items-center justify-center gap-4 text-center">
+                <span class="grid h-14 w-14 place-items-center rounded-full bg-lime text-spruce"><svg class="icon icon-success h-6 w-6" aria-hidden="true"><use href="/icons.svg#check"/></svg><svg class="icon icon-error h-6 w-6" aria-hidden="true"><use href="/icons.svg#alert"/></svg></span>
+                <p data-contact-message role="status" class="text-lg font-medium"></p>
+                <button type="button" data-contact-retry class="rounded-full border-2 border-spruce px-5 py-2 text-sm font-medium">Try again</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-spruce text-cream/70">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-10 text-sm md:flex-row md:items-center">
+        <p>&copy; 2026 Nathan Lloyd. Freelance AI + Cloud Developer, Windsor, Colorado.</p>
+        <div class="flex items-center gap-4 text-cream">
+            <a href="https://www.linkedin.com/in/nathan-lloyd-45590b2b" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-lime"><svg class="icon-brand h-5 w-5" aria-hidden="true"><use href="/icons.svg#linkedin"/></svg></a>
+            <a href="https://github.com/mangosmoothie" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-lime"><svg class="icon-brand h-5 w-5" aria-hidden="true"><use href="/icons.svg#github"/></svg></a>
+            <a href="https://twitter.com/adventuresoluti" target="_blank" rel="noopener" aria-label="X" class="hover:text-lime"><svg class="icon-brand h-5 w-5" aria-hidden="true"><use href="/icons.svg#x"/></svg></a>
+        </div>
     </div>
 </footer>
-
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

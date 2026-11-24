@@ -1,101 +1,36 @@
 ---
-version: "1.0"
-name: "Nathan Lloyd Personal Brand"
-description: "Professional, trustworthy, minimalist portfolio for a veteran Full Stack Cloud & AI Developer based in Colorado."
-audience: "Business owners, technical leaders, and teams seeking secure AI and cloud solutions."
-tone: "Authoritative yet approachable, calm confidence, practical leadership."
-
-# Brand Principles
-principles:
-  - "Clarity over cleverness"
-  - "Trust through simplicity and substance"
-  - "Colorado-inspired calm strength"
-  - "Results-focused minimalism"
-  - "Security and privacy as visible values"
+version: "2.0"
+name: "Nathan Lloyd Personal Brand — Atlas"
+description: "A bold, high-contrast homepage: spruce, cream and lime, built to market a senior engineer who ships products."
+audience: "Business owners deciding quickly whether to start a conversation."
+tone: "Direct, warm, confident."
 
 # Design Tokens
 colors:
-  primary: "#0F766E"           # Teal-700 - Trust, professionalism, mountain lake
-  accent: "#D97706"            # Amber-600 - Warm Colorado energy
-  background:
-    light: "#F8FAFC"
-    dark: "#0F172A"
-  text:
-    primary: "#1E2937"
-    secondary: "#64748B"
-
+  cream: "#F4EFE4"
+  spruce: "#12352B"
+  lime: "#E2FF54"
+  ink: "#14221C"
 typography:
-  heading:
-    fontFamily: "Inter, system-ui, sans-serif"
-    fontWeight: 700
-  body:
-    fontFamily: "Inter, system-ui, sans-serif"
-    fontWeight: 400
-
-spacing:
-  base: 4
-  scale:
-    none: 0
-    xs: 4
-    sm: 8
-    md: 12
-    lg: 16
-    xl: 24
-    xxl: 32
-    xxxl: 48
-    huge: 64
-
-borderRadius:
-  default: "16px"
-  large: "24px"
-
-shadows:
-  card: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+  fontFamily: "Outfit Variable, system-ui, sans-serif"
+  headingWeight: 600
 ---
 
 # DESIGN.md – nathanlloyd.dev
 
 ## Overview
-A clean, professional, minimalist single-page portfolio website
+A campaign-style single page. One typeface, three colors, large type, and the Colorado photograph used as a portrait setting.
 
-## Visual Identity & Atmosphere
-- **Overall Feel**: Calm, confident, and grounded — like a clear Colorado mountain morning.
-- **Personality**: Professional who gets things done without unnecessary complexity.
-- **Color Story**: Deep teal (trust and nature) with warm amber accents (sunrise energy). Dark mode support for modern developer appeal.
+## Visual Identity
+- Cream page, spruce panels, lime reserved for the headline mark, the stat band, live badges and the primary action on dark.
+- Outfit, self-hosted. Icons from the local sprite. No third-party CDNs.
+- Fully rounded pills and panels. No hairline grids.
 
-## Typography
-- Clean, highly readable sans-serif (Inter).
-- Generous hierarchy and whitespace.
-- Headlines are strong but never shouty.
-
-## Layout & Components
-- **Hero**: Split layout on desktop (text and large circular headshot) with a subtle Rocky Mountains background.
-- **Sections**: Clear headings, generous spacing, card-based expertise grid.
-- **Navigation**: Simple sticky top nav.
-- **Buttons**: Rounded, high contrast, clear CTAs.
-
-## Key Pages / Sections
-- Hero (with main and supporting taglines)
-- About (professional and personal blend)
-- Expertise (AI-first cards)
-- Results (generalized, metric-rich experience)
-- Contact (form + Calendly)
-
-## Do's and Don'ts
-
-**Do:**
-- Emphasize security, data ownership, and privacy
-- Use real metrics and business outcomes
-- Show warmth and approachability (family / Colorado elements)
-- Keep text concise and benefit-focused
-
-**Don't:**
-- Overuse technical jargon
-- Make it look like a generic corporate site
-- List programming languages as primary selling points
-- Overload the hero with too much text
-
-## Future Extensions
-- Blog section for AI/cloud thought leadership
-- Case studies with more detail
-- Testimonials (when available)
+## Sections
+- Hero with the mountain photograph and a name chip
+- Lime record band: 20+, 144M+, 10 TB, 3×
+- Work: two live products on spruce, two in development as outlines
+- Practice: six numbered offers
+- Experience, with logos and a resume link
+- About, on spruce, with the portrait
+- Contact: Calendly, email and the form
